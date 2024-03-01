@@ -1,0 +1,255 @@
+/* Variables */
+redLive = hsl(14, 99%, 34%)
+redVive = hsl(14, 100%, 46%)
+grayDark = hsl(0, 0%, 20%)
+noWhite = #F2F2F2
+
+:root
+  font-size 16px
+
+a
+  color noWhite
+  text-decoration none
+
+body
+  width 100%
+  font-size 1vw
+  line-height 120%
+  font-family "Atkinson Hyperlegible" ,sans-serif
+  color noWhite
+  font-weight 400
+
+/* Main */
+#main
+  background noWhite
+  width 100%
+  height auto
+
+.header
+  padding 10vh 0 10vh 0
+  position relative
+  z-index 1
+  &:before
+    position absolute
+    top -6vh
+    z-index -1
+    content ""
+    background redLive
+    transform skewY(-3deg)
+    width 100%
+    height 100%
+    border-radius 1vw
+  .wrap-logo
+    display flex
+    justify-content center
+    align-items center
+    margin 0 auto
+    gap 2vw
+    width 90%
+    max-width 1920px
+    padding 1vw 0 1vw 0
+    animation slideLeft 1s ease-in both
+  .logo
+    width 48%
+    text-align right
+  img
+    display inline
+    text-align right
+    width 10vw
+  hgroup
+    width 48%
+    display flex
+    gap 1vw
+    flex-direction column
+  h1
+    font-size 3vw
+    line-height 100%
+    text-transform uppercase
+    font-family 'Viga', sans-serif
+  h2
+    font-weight normal
+    font-size 1.8vw
+
+/* Animation Logo */
+@keyframes slideLeft
+  0%
+    opacity 0
+    transform translateX(-100%)
+  50%
+    opacity 1
+    transform translateX(8%)
+  65%
+    transform translateX(-4%)
+  80%
+    transform translateX(4%)
+  95%
+    transform translateX(-2%)
+  100%
+    transform translateX(0%)
+
+/* Menu */
+#main-menu
+  width 90%
+  max-width 1920px
+  margin 0 auto
+  padding 2vw 0 1vw 0
+  display flex
+  justify-content center
+  #first-menu
+    display flex
+    gap 2vw
+  li
+    list-style none
+    transform skewY(-3deg)
+    outline solid 0.2vw noWhite
+    border-radius 0.2vw
+    animation slideDown .1s ease-in both
+    animation-delay 1s
+  a
+    padding 1vw
+    font-weight 700
+    text-align center
+    letter-spacing 2pt
+    text-transform uppercase
+    &:hover
+      background redVive
+
+/* Animation menu*/
+@keyframes slideDown
+  0%
+    opacity 0
+    transform translateY(-50%)
+  100%
+    opacity 1
+    transform translateY(0%)
+    transform skewY(-3deg)
+
+/*Content*/
+#content
+  margin 0 auto
+  width 90%
+  max-width 1920px
+  padding 3vw 0 3vw 0
+  display flex
+  justify-content space-between
+  gap 2vw
+  #main-content
+    width 45%
+    padding 2vw 0 2vw 0
+    p
+      color grayDark
+      padding-bottom 1vh
+    strong
+      font-weight 700
+  .banner
+    position relative
+    z-index 1
+    width 45%
+    height auto
+    text-align center
+    padding 2vw
+    display flex
+    justify-content center
+    align-items center
+    &:before
+      position absolute
+      left 0
+      top 0
+      z-index -1
+      content ""
+      background-color #f24231
+      background-image repeating-linear-gradient(45deg,transparent,transparent 35px,rgba(255,255,255,0.1) 35px,rgba(255,255,255,0.1) 70px)
+      transform skewY(-3deg)
+      width 100%
+      height 100%
+      border-radius 1vw
+    p
+      font-size 1.4vw
+      line-height 140%
+      color noWhite
+      font-family 'Viga', sans-serif
+    strong
+      font-size 1.6vw
+    img
+      display inline
+      width 2vw
+
+/* Banner Animation */
+.floating
+  animation-name floating
+  animation-duration 1.5s
+  animation-iteration-count infinite
+
+@keyframes floating
+  0%
+    transform translateY(0%)
+  50%
+    transform translateY(3%)
+  100%
+    transform translateY(0%)
+
+/* Aside */
+#footer
+  width 100%
+  padding 2vw 0 2vw 0
+  position relative
+  z-index 1
+  &:before
+    position absolute
+    z-index -1
+    content ""
+    background rgb(167,7,7)
+    background radial-gradient(circle, rgba(167,7,7,1) 0%, rgba(255,0,0,1) 50%, rgba(190,0,0,1) 100%)
+    transform skewY(-3deg)
+    width 100%
+    height 100%
+    border-radius 1vw
+
+#logofooter
+  height auto
+  max-width 10%
+  display block
+  margin 0 auto
+  padding-bottom 2vw
+
+#uso
+  width 90%
+  margin 2vw auto
+  max-width 1920px
+  h3
+    font-family 'Viga', sans-serif
+    font-size 1.4vw
+    text-align center
+    font-weight normal
+    padding 0 0 1rem 0
+
+#uso-leer
+  display flex
+  justify-content space-around
+  padding 1vw 0 2vw 0
+  nav
+    width 30%
+    &:last-child
+      text-align center
+  h4
+    font-size 1.2vw
+    text-align center
+    margin-bottom 1vw
+    font-family 'Viga', sans-serif
+    text-transform uppercase
+  ul
+    width 90%
+    margin 0 auto
+  li
+    list-style none
+
+footer
+  margin 0 auto
+  width 90%
+  max-width 1366px
+  padding 2rem 0 2rem 0
+  p
+    text-align right
+    color grayDark
+  a
+    color grayDark

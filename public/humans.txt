@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Edgar Cornejo -- Desarrollador Web Front end -- devcornejo -- Arequipa, Arequipa, Perú
+
+# THANKS
+
+    https://html5boilerplate.com/
+    http://getbootstrap.com/
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
