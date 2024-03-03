@@ -1,11 +1,11 @@
 ---
-
+const { title } = Astro.props;
 ---
 
 <div id="wrapper-header">
   <header>
     <div id="hgroup">
-      <h1>Fotos Gratis</h1>
+      <h1>{title}</h1>
       <h2>Descarga simple y rápida</h2>
     </div>
 
@@ -15,8 +15,12 @@
 
     <input type="checkbox" id="input-menu" />
     <nav id="main-menu">
-      <label for="input-menu" class="open-menu"></label>
-      <label for="input-menu" class="closed-menu"></label>
+      <label for="input-menu" class="open-menu"
+        ><span class="material-symbols-rounded">menu</span></label
+      >
+      <label for="input-menu" class="closed-menu"
+        ><span class="material-symbols-rounded">close</span></label
+      >
       <menu>
         <li><a href="/fotos" title="Fotos">Fotos</a></li>
         <li>

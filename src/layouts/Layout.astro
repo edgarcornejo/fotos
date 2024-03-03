@@ -6,7 +6,7 @@ import Header from "../components/Header.astro";
 import AsideFooter from "../components/AsideFooter.astro";
 
 const {
-  title = "Fotos Gratis - Descarga simple y rápida Free Photos, free pic, fotos gratuitas, fotos sin derechos de autor, banco de fotos, imágenes gratis.",
+  title = "Fotos Gratis",
   description = "Fotos Gratis es un banco de fotos sin derecho de autor, gratuitas para todos para proyectos web o diseños de cualquier tipo.",
   keywords = "free pic, fotos gratuitas, fotos sin derechos de autor, banco de fotos, imágenes gratis",
 } = Astro.props;
@@ -16,8 +16,15 @@ const {
 <html lang="en">
   <Head {title} {description} {keywords} />
   <body>
-    <Header />
-    <slot />
+    <Header {title} />
+
+    <main id="main-content">
+      <section id="main-section">
+        <slot />
+      </section>
+    </main>
+
     <AsideFooter />
+    <style></style>
   </body>
 </html>

@@ -8,6 +8,11 @@ noWhite = #F2F2F2
 :root
   font-size 16px
 
+/* Seleccion */
+::selection
+  background solid2
+  text-shadow none
+
 body
   color solid8
   width 100%
@@ -32,10 +37,12 @@ body
     justify-content space-between
     align-items center
     flex-wrap wrap
+    gap clamp(1.8rem, 1vw, 1.2vw)
 
 /* hgroup H1 y H2 */
 #hgroup
   order 2
+  flex-grow 2
   display flex
   align-items center
   gap clamp(1rem, 1vw, 1vw)
@@ -86,53 +93,74 @@ body
   100%
     opacity 1
 
-/*Content*/
-#content
-  margin 0 auto
+/* Conteneddor de contenido principal Layout */
+#main-content
+  width 100%
+  height auto
+  padding clamp(3rem, 6vw, 6.2vw) 0 clamp(3rem, 6vw, 6.2vw) 0
+  display flex
+  justify-content center
+
+/* Seccion principal de Layout */
+#main-section
   width 90%
   max-width 1920px
-  padding 3vw 0 3vw 0
   display flex
   justify-content space-between
-  gap 2vw
-  #main-content
-    width 45%
-    padding 2vw 0 2vw 0
-      padding-bottom 1vh
-    strong
-      font-weight 700
-  .banner
-    position relative
-    z-index 1
-    width 45%
-    height auto
-    text-align center
-    padding 2vw
-    display flex
-    justify-content center
-    align-items center
-    &:before
-      position absolute
-      left 0
-      top 0
-      z-index -1
-      content ""
-      background-color solid4
-      background-image repeating-linear-gradient(45deg,transparent,transparent 35px,solid2 35px,solid2 70px)
-      transform skewY(-3deg)
-      width 100%
-      height 100%
-      border-radius 1vw
-    p
-      font-size 1.4vw
-      line-height 140%
-      color noWhite
-      font-family 'Viga', sans-serif
-    strong
-      font-size 1.6vw
-    img
-      display inline
-      width 2vw
+  align-items center
+  gap clamp(2rem, 2vw, 2.2vw)
+
+#main-article
+  width 100%
+  header
+    padding clamp(1rem, 1vw, 1.2vw) 0 clamp(0.6rem, 0.6vw, 0.8vw) 0
+    border-bottom solid clamp(3px, 0.1vw, 0.2vw) solid2
+    margin-bottom clamp(1rem, 1vw, 1.2vw)
+  h2
+    font-size clamp(1.6em, 1.6vw, 1.8vw)
+    padding-left clamp(1rem, 1vw, 1.2vw)
+    font-weight 700
+    color solid4
+    letter-spacing 1pt
+  p
+    padding-bottom clamp(1rem, 1vw, 1.2vw)
+    hyphens none
+  strong
+    font-weight 700
+
+/* Banner descarga */ 
+.banner
+  position relative
+  z-index 0
+  width 100%
+  height auto
+  text-align center
+  padding clamp(2rem, 2vw, 2.2vw)
+  display flex
+  justify-content center
+  align-items center
+  &:before
+    position absolute
+    left 0
+    top 0
+    z-index -1
+    content ""
+    background-color solid4
+    background-image repeating-linear-gradient(45deg,transparent,transparent 35px,solid2 35px,solid2 70px)
+    transform skewY(-3deg)
+    width 100%
+    height 100%
+    border-radius clamp(6px, 0.4vw, 0.6vw)
+  p
+    font-size clamp(1.4em, 1.4vw, 1.6vw)
+    line-height 140%
+    color noWhite
+    font-family 'Viga', sans-serif
+  strong
+    font-size clamp(1.6em, 1.6vw, 1.8vw)
+  img
+    display inline
+    width clamp(48px, 2vw, 2.2vw)
 
 /* Banner Animation */
 .floating
@@ -205,3 +233,54 @@ footer
   padding clamp(2rem, 2vw, 2.2vw)
   p
     text-align center
+
+/*Responsive Design*/
+@media screen and (max-width:1024px)
+  /* Main menu */
+  #main-menu
+    menu
+      display none
+    .open-menu,.closed-menu
+      justify-content center
+      align-items center
+      span
+        font-size 48px
+    .open-menu
+      display flex
+  
+  #input-menu:checked ~ nav
+    .open-menu
+      display none
+    .closed-menu
+      display flex
+    menu
+      display flex
+      justify-content center
+      width 100%
+      position absolute
+      z-index 1
+      top 50vh
+      left 0
+      background solid8
+      padding 2rem
+    
+  /* Seccion principal de Layout */
+  #main-section
+    flex-direction column
+  
+  #uso
+    flex-direction column
+    div, nav
+      width 100%
+
+@media screen and (max-width:620px)
+  /* Conponent Header */
+  #wrapper-header
+    header
+      flex-direction column
+  
+  /* hgroup H1 y H2 */
+  #hgroup
+    flex-grow 1
+    flex-direction column
+
