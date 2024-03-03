@@ -2,6 +2,8 @@
 import "../styles/reset.css";
 import "../styles/main.css";
 import Head from "../layouts/Head.astro";
+import Header from "../components/Header.astro";
+import AsideFooter from "../components/AsideFooter.astro";
 
 const {
   title = "Fotos Gratis - Descarga simple y rápida Free Photos, free pic, fotos gratuitas, fotos sin derechos de autor, banco de fotos, imágenes gratis.",
@@ -14,6 +16,8 @@ const {
 <html lang="en">
   <Head {title} {description} {keywords} />
   <body>
+    <Header />
     <slot />
+    <AsideFooter />
   </body>
 </html>

@@ -1,128 +1,90 @@
 /* Variables */
-redLive = hsl(14, 99%, 34%)
-redVive = hsl(14, 100%, 46%)
-grayDark = hsl(0, 0%, 20%)
+solid2 = rgba(0,0,0,0.2)
+solid4 = rgba(0,0,0,0.4)
+solid6 = rgba(0,0,0,0.6)
+solid8 = rgba(0,0,0,0.8)
 noWhite = #F2F2F2
 
 :root
   font-size 16px
 
-a
-  color noWhite
-  text-decoration none
-
 body
+  color solid8
   width 100%
-  font-size 1vw
+  font-size clamp(1em, 1vw, 1.2vw)
   line-height 120%
   font-family "Atkinson Hyperlegible" ,sans-serif
-  color noWhite
   font-weight 400
-
-/* Main */
-#main
   background noWhite
-  width 100%
-  height auto
 
-.header
-  padding 10vh 0 10vh 0
-  position relative
-  z-index 1
-  &:before
-    position absolute
-    top -6vh
-    z-index -1
-    content ""
-    background redLive
-    transform skewY(-3deg)
-    width 100%
-    height 100%
-    border-radius 1vw
-  .wrap-logo
-    display flex
-    justify-content center
-    align-items center
-    margin 0 auto
-    gap 2vw
+/* Conponent Header */
+#wrapper-header
+  background solid8
+  color noWhite
+  padding clamp(2rem, 2vh, 2.2vh) 0 clamp(2rem, 2vh, 2.2vh) 0
+  display flex
+  justify-content center
+  animation aparecer 1s ease-in
+  header
     width 90%
     max-width 1920px
-    padding 1vw 0 1vw 0
-    animation slideLeft 1s ease-in both
-  .logo
-    width 48%
-    text-align right
-  img
-    display inline
-    text-align right
-    width 10vw
-  hgroup
-    width 48%
     display flex
-    gap 1vw
-    flex-direction column
+    justify-content space-between
+    align-items center
+    flex-wrap wrap
+
+/* hgroup H1 y H2 */
+#hgroup
+  order 2
+  display flex
+  align-items center
+  gap clamp(1rem, 1vw, 1vw)
+  hyphens none
   h1
-    font-size 3vw
+    font-size clamp(1.4em, 1.2vw, 1.4vw)
     line-height 100%
     text-transform uppercase
     font-family 'Viga', sans-serif
   h2
-    font-weight normal
-    font-size 1.8vw
+    line-height 100%
 
-/* Animation Logo */
-@keyframes slideLeft
-  0%
-    opacity 0
-    transform translateX(-100%)
-  50%
-    opacity 1
-    transform translateX(8%)
-  65%
-    transform translateX(-4%)
-  80%
-    transform translateX(4%)
-  95%
-    transform translateX(-2%)
-  100%
-    transform translateX(0%)
-
-/* Menu */
-#main-menu
-  width 90%
-  max-width 1920px
-  margin 0 auto
-  padding 2vw 0 1vw 0
+/* Main logo */
+#main-logo
+  order 1
   display flex
-  justify-content center
-  #first-menu
+  img
+    width 3vw
+    min-width 48px
+    height auto
+
+/* Main menu */
+#main-menu
+  order 3
+  menu
     display flex
-    gap 2vw
+    flex-wrap wrap
+    gap clamp(1rem, 1vw, 1vw)
   li
-    list-style none
-    transform skewY(-3deg)
-    outline solid 0.2vw noWhite
-    border-radius 0.2vw
-    animation slideDown .1s ease-in both
-    animation-delay 1s
+    display flex
   a
-    padding 1vw
     font-weight 700
-    text-align center
-    letter-spacing 2pt
-    text-transform uppercase
+    padding clamp(1rem, 0.4vw, 0.6vw)
+    outline solid clamp(3px, 0.1vw, 0.2vw) noWhite
+    border-radius clamp(3px, 0.2vw, 0.2vw)
+    transition all 0.2s ease-in-out
     &:hover
-      background redVive
+      color solid8
+      background noWhite
+
+#input-menu,.open-menu,.closed-menu
+  display none
 
 /* Animation menu*/
-@keyframes slideDown
+@keyframes aparecer
   0%
     opacity 0
-    transform translateY(-50%)
   100%
     opacity 1
-    transform translateY(0%)
-    transform skewY(-3deg)
 
 /*Content*/
 #content
@@ -136,8 +98,6 @@ body
   #main-content
     width 45%
     padding 2vw 0 2vw 0
-    p
-      color grayDark
       padding-bottom 1vh
     strong
       font-weight 700
@@ -157,8 +117,8 @@ body
       top 0
       z-index -1
       content ""
-      background-color #f24231
-      background-image repeating-linear-gradient(45deg,transparent,transparent 35px,rgba(255,255,255,0.1) 35px,rgba(255,255,255,0.1) 70px)
+      background-color solid4
+      background-image repeating-linear-gradient(45deg,transparent,transparent 35px,solid2 35px,solid2 70px)
       transform skewY(-3deg)
       width 100%
       height 100%
@@ -188,68 +148,60 @@ body
   100%
     transform translateY(0%)
 
-/* Aside */
-#footer
+/* Component AsideFooter */
+#main-aside
   width 100%
-  padding 2vw 0 2vw 0
-  position relative
-  z-index 1
-  &:before
-    position absolute
-    z-index -1
-    content ""
-    background rgb(167,7,7)
-    background radial-gradient(circle, rgba(167,7,7,1) 0%, rgba(255,0,0,1) 50%, rgba(190,0,0,1) 100%)
-    transform skewY(-3deg)
-    width 100%
-    height 100%
-    border-radius 1vw
+  padding clamp(3rem, 4vw, 4.2vw) 0 clamp(3rem, 4vw, 4.2vw) 0
+  background solid4
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  gap clamp(2rem, 2.8vw, 3vw)
 
 #logofooter
   height auto
-  max-width 10%
-  display block
-  margin 0 auto
-  padding-bottom 2vw
+  max-width 6%
+  min-width 48px
 
 #uso
   width 90%
-  margin 2vw auto
   max-width 1920px
-  h3
-    font-family 'Viga', sans-serif
-    font-size 1.4vw
-    text-align center
-    font-weight normal
-    padding 0 0 1rem 0
-
-#uso-leer
   display flex
-  justify-content space-around
-  padding 1vw 0 2vw 0
-  nav
-    width 30%
-    &:last-child
-      text-align center
-  h4
-    font-size 1.2vw
-    text-align center
-    margin-bottom 1vw
+  flex-wrap wrap
+  justify-content space-between
+  gap clamp(1rem, 1vw, 1.2vw) clamp(2rem, 2vw, 2.2vw)
+  h3, h4
+    border-bottom solid clamp(2px, 0.1vw, 0.2vw) solid4
+    width 100%
     font-family 'Viga', sans-serif
-    text-transform uppercase
+    font-size clamp(1.4em, 1.4vw, 1.6vw)
+    text-align center
+    padding-bottom clamp(1rem, 0.6vw, 0.8vw)
+    margin-bottom clamp(1rem, 1vw, 1.2vw)
+    color solid6
+  div, nav
+    width 30%
+  p
+    padding-bottom clamp(1rem, 1vw, 1.2vw)
+    hyphens none
+  a
+    color noWhite
+    transition all 0.2s ease-in-out
+    &:hover
+      color solid8
   ul
-    width 90%
-    margin 0 auto
-  li
-    list-style none
+    display flex
+    gap clamp(1rem, 1vw, 1.2vw)
+    a
+      outline solid clamp(3px, 0.1vw, 0.2vw) noWhite
+      padding clamp(1rem, 0.4vw, 0.6vw)
+      border-radius clamp(3px, 0.2vw, 0.2vw)
+      &:hover
+        background noWhite
+        color solid8
 
 footer
-  margin 0 auto
-  width 90%
-  max-width 1366px
-  padding 2rem 0 2rem 0
+  padding clamp(2rem, 2vw, 2.2vw)
   p
-    text-align right
-    color grayDark
-  a
-    color grayDark
+    text-align center
