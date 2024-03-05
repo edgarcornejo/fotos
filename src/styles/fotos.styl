@@ -1,0 +1,109 @@
+/* Variables */
+solid2 = rgba(0,0,0,0.2)
+solid4 = rgba(0,0,0,0.4)
+solid6 = rgba(0,0,0,0.6)
+solid8 = rgba(0,0,0,0.8)
+noWhite = #F2F2F2
+
+/* Header de fotos */
+#header-fotos
+  display flex
+  flex-direction column
+  p
+    margin clamp(1rem, 1vw, 1vw) 0 clamp(1rem, 1vw, 1vw) 0
+
+#title-page
+  display flex
+  align-items center
+  gap clamp(1rem, 1vw, 1vw)
+  h2
+    font-size clamp(2em, 2vw, 2.2vw)
+    font-family 'Viga', sans-serif
+    line-height 100%
+  span
+    color solid8
+    font-size clamp(48px, 2vw, 2vw)
+  
+#tags
+  display flex
+  align-items center
+  flex-wrap wrap
+  gap clamp(1rem, 1vw, 1.2vw)
+  li
+    display flex
+    align-items center
+    color solid4
+    border solid clamp(2px, 0.1vw, 0.1vw) solid4
+    border-radius clamp(3px, 0.4vw, 0.4vw)
+    padding clamp(16px, 0.4vw, 0.6vw)
+    gap clamp(1rem, 0.4vw, 0.4vw)
+    text-transform capitalize
+  span
+    color solid4
+    font-size clamp(1em, 1vw, 1.2vw)
+
+/* Categorias de Fotos */
+#sub-menu
+  padding clamp(2rem, 2vw, 2.2vw) 0 clamp(2rem, 2vw, 2.2vw) 0
+  ul
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    gap clamp(1rem, 1vw, 1.2vw)
+  a
+    border solid clamp(2px, 0.1vw, 0.1vw) solid6
+    border-radius clamp(3px, 0.4vw, 0.4vw)
+    padding clamp(0.8em, 0.8vw, 1vw)
+    transition all 0.2s ease-in-out
+    &:hover
+      color noWhite
+      background solid8
+
+/* Busqueda */
+#search
+  width 100%
+  padding clamp(1rem, 1vw, 1vw) 0 clamp(1rem, 1vw, 1vw) 0
+  input[type=text]
+    padding clamp(1rem, 1vw, 1vw)!important
+    background none !important
+  .gsc-search-button-v2
+    padding clamp(1rem, 1vw, 1vw)
+    background-color solid6
+    svg
+      width 48px
+
+/* Grid de fotos */
+#grid
+  margin-top clamp(1rem, 1vw, 1vw)
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  gap clamp(1rem, 1vw, 1.2vw)
+  li
+    width 22%
+    background #FFF
+    padding clamp(1rem, 1vw, 1.2vw)
+    border-radius clamp(3px, 0.2vw, 0.2vw)
+    text-align right
+    &:hover img
+      filter saturate(1)
+  img
+    border-radius clamp(3px, 0.2vw, 0.2vw)
+    filter saturate(0)
+    spect-ratio 4 / 5
+  span
+    font-size clamp(2em, 2vw, 2vw)
+    margin-top clamp(1rem, 1vw, 1vw)
+
+/*Responsive Design*/
+@media screen and (max-width:1024px)
+  /* Grid de fotos */
+  #grid
+    li
+      width 48%
+
+@media screen and (max-width:768px)
+  /* Grid de fotos */
+  #grid
+    li
+      width 100%

@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/fotos.css";
+const { frontmatter, title = frontmatter.title } = Astro.props;
+---
+
+<Layout {title}>
+  <div>
+    <header id="header-fotos">
+      <div id="title-page">
+        <h2>
+          Fotos de {frontmatter.title}
+        </h2>
+        <span class="material-symbols-rounded">photo_camera</span>
+      </div>
+
+      <p>{frontmatter.description}</p>
+      <ul id="tags">
+        {
+          frontmatter.tags.map((post) => (
+            <li>
+              <span class="material-symbols-rounded">label</span> {post}
+            </li>
+          ))
+        }
+      </ul>
+    </header>
+
+    <article>
+      <ul id="grid">
+        <slot />
+      </ul>
+    </article>
+  </div>
+</Layout>
