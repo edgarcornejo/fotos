@@ -129,7 +129,7 @@
   border-radius: clamp(3px, 0.2vw, 0.2vw);
   -webkit-filter: saturate(0);
           filter: saturate(0);
-  spect-ratio: 4/5;
+  aspect-ratio: 5/4;
 }
 #grid span {
   font-size: clamp(2em, 2vw, 2vw);

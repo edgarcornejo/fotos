@@ -1,4 +1,8 @@
 ---
+/* importando assets */
+import { Image } from "astro:assets";
+import logo from "../assets/logofg.svg";
+
 const { title } = Astro.props;
 ---
 
@@ -10,8 +14,8 @@ const { title } = Astro.props;
     </div>
 
     <a id="main-logo" href="/" title="Fotos Gratis"
-      ><img src="/fotosgratis.svg" alt="Logotipo Fotos Gratis" /></a
-    >
+      ><Image src={logo} alt="Logotipo Fotos Gratis" />
+    </a>
 
     <input type="checkbox" id="input-menu" />
     <nav id="main-menu">

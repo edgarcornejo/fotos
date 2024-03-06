@@ -1,10 +1,12 @@
 ---
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, image } = Astro.props;
 ---
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="author" href="/humans.txt" />
   <link rel="icon" type="image/svg+xml" href="/fotosgratis.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="generator" content={Astro.generator} />
@@ -19,21 +21,14 @@ const { title, description, keywords } = Astro.props;
   <meta name="copyright" content="© 2020 FG" />
   <meta name="robots" content="Index,Follow" />
   <meta name="distribution" content="global" />
-  <meta property="fb:page_id" content="202197103306985" />
   <meta name="author" content="Edgar Cornejo" />
   <meta name="designer" content="Edgar Cornejo" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.fotos.edgarcornejo.com" />
-  <meta
-    property="og:image"
-    content="https://www.fotos.edgarcornejo.com/img/fotosgratis.png"
-  />
+  <meta property="og:image" content={image} />
   <meta property="og:site_name" content="Fotos Gratis" />
-  <meta
-    name="google-site-verification"
-    content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
-  />
 
+  <!-- importando fuentes e iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link

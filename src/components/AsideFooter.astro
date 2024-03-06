@@ -1,14 +1,11 @@
 ---
-
+/* importando assets */
+import { Image } from "astro:assets";
+import logo from "../assets/logofg.svg";
 ---
 
 <aside id="main-aside">
-  <img
-    src="/fotosgratis.svg"
-    alt="Logotipo Fotos Gratis"
-    loading="lazy"
-    id="logofooter"
-  />
+  <Image src={logo} alt="Logotipo Fotos Gratis" id="logofooter" />
 
   <section id="uso">
     <h3>¿Qué puedo hacer con las fotos?</h3>

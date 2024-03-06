@@ -1,0 +1,38 @@
+{
+  "name": "Fotos Gratis",
+  "short_name": "FG",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "app/fotosgratis.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "app/fotosgratis.svg",
+      "sizes": "72x72",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "app/fotosgratis.svg",
+      "sizes": "96x96",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "app/fotosgratis.svg",
+      "sizes": "144x144",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "app/fotosgratis.svg",
+      "sizes": "168x168",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

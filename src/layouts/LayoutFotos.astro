@@ -17,7 +17,7 @@ const { frontmatter, title = frontmatter.title } = Astro.props;
       <p>{frontmatter.description}</p>
       <ul id="tags">
         {
-          frontmatter.tags.map((post) => (
+          frontmatter.tags.map((post: any) => (
             <li>
               <span class="material-symbols-rounded">label</span> {post}
             </li>
