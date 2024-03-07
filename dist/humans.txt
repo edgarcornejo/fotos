@@ -12,7 +12,6 @@
 
 # THANKS
 
-    https://html5boilerplate.com/
     https://astro.build/
 
 # TECHNOLOGY COLOPHON

@@ -1,5 +1,6 @@
-# build output
+# build output for netlify
 #dist/
+
 # generated types
 .astro/
 
@@ -19,3 +20,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Prepros File
+prepros.config

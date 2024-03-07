@@ -1,7 +1,7 @@
 {
   "name": "Fotos Gratis",
   "short_name": "FG",
-  "start_url": "/",
+  "start_url": "https://www.fotos.edgarcornejo.com/",
   "display": "standalone",
   "icons": [
     {
@@ -28,11 +28,6 @@
       "src": "app/fotosgratis.svg",
       "sizes": "168x168",
       "type": "image/svg+xml"
-    },
-    {
-      "src": "homescreen192.png",
-      "sizes": "192x192",
-      "type": "image/png"
     }
   ]
 }
