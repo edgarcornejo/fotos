@@ -1,137 +1,35 @@
-/* Variables */
-solid2 = rgba(0,0,0,0.2)
-solid4 = rgba(0,0,0,0.4)
-solid6 = rgba(0,0,0,0.6)
-solid8 = rgba(0,0,0,0.8)
-noWhite = #F2F2F2
+@charset "UTF-8"
 
-:root
-  font-size 16px
+@import './var.styl'
 
-/* Seleccion */
-::selection
-  background solid2
-  text-shadow none
-
-body
-  color solid8
-  width 100%
-  font-size clamp(1em, 1vw, 1.2vw)
-  line-height 120%
-  font-family "Atkinson Hyperlegible" ,sans-serif
-  font-weight 400
-  background noWhite
-
-/* Conponent Header */
-#wrapper-header
-  background solid8
-  color noWhite
-  padding clamp(2rem, 2vh, 2.2vh) 0 clamp(2rem, 2vh, 2.2vh) 0
-  display flex
-  justify-content center
-  animation aparecer 1s ease-in
-  header
-    width 90%
-    max-width 1920px
-    display flex
-    justify-content space-between
-    align-items center
-    flex-wrap wrap
-    gap clamp(1.8rem, 1vw, 1.2vw)
-
-/* hgroup H1 y H2 */
-#hgroup
-  order 2
-  flex-grow 2
-  display flex
-  align-items center
-  gap clamp(1rem, 1vw, 1vw)
-  hyphens none
-  h1
-    font-size clamp(1.4em, 1.2vw, 1.4vw)
-    line-height 100%
-    text-transform uppercase
-    font-family 'Viga', sans-serif
-  h2
-    line-height 100%
-
-/* Main logo */
-#main-logo
-  order 1
-  display flex
-  img
-    width 3vw
-    min-width 48px
-    height auto
-
-/* Main menu */
-#main-menu
-  order 3
-  menu
-    display flex
-    flex-wrap wrap
-    gap clamp(1rem, 1vw, 1vw)
-  li
-    display flex
-  a
-    display flex
-    justify-content center
-    align-items center
-    gap clamp(0.6rem, 0.8vw, 0.8vw)
-    font-weight 700
-    padding clamp(0.6rem, 0.4vw, 0.6vw)
-    outline solid clamp(3px, 0.1vw, 0.2vw) noWhite
-    border-radius clamp(3px, 0.2vw, 0.2vw)
-    transition all 0.2s ease-in-out
-    &:hover
-      color solid8
-      background noWhite
-  span
-    font-size clamp(20px, 1vw, 1vw)
-
-#input-menu,.open-menu,.closed-menu
-  display none
-
-/* Animation menu*/
-@keyframes aparecer
-  0%
-    opacity 0
-  100%
-    opacity 1
-
-/* Conteneddor de contenido principal Layout */
+/* Contenedor de contenido principal Layout */
 #main-content
   width 100%
   height auto
-  padding clamp(3rem, 6vw, 6.2vw) 0 clamp(3rem, 6vw, 6.2vw) 0
+  padding space3 0 space3 0
   display flex
   justify-content center
 
-/* Seccion principal de Layout */
+/* Sección principal de Layout */
 #main-section
   width 90%
-  max-width 1920px
   display flex
   justify-content space-between
   align-items center
-  gap clamp(2rem, 2vw, 2.2vw)
+  gap space2
 
 #main-article
   width 100%
   header
-    padding clamp(1rem, 1vw, 1.2vw) 0 clamp(0.6rem, 0.6vw, 0.8vw) 0
-    border-bottom solid clamp(3px, 0.2vw, 0.3vw) solid2
-    margin-bottom clamp(1rem, 1vw, 1.2vw)
+    padding space1 0 space1 0
+    border-bottom solid border1 solid2
+    margin-bottom space1
   h2
-    font-size clamp(1.6em, 1.6vw, 1.8vw)
-    padding-left clamp(1rem, 1vw, 1.2vw)
-    font-weight 700
+    font-size clamp(24px, 1.6vw, 1.8vw)
     color solid4
     letter-spacing 1pt
-    span
-      font-size inherit
   p
-    padding-bottom clamp(1rem, 1vw, 1.2vw)
+    padding-bottom space1
     hyphens none
   strong
     font-weight 700
@@ -143,7 +41,7 @@ body
   width 100%
   height auto
   text-align center
-  padding clamp(2rem, 2vw, 2.2vw)
+  padding space2
   display flex
   justify-content center
   align-items center
@@ -155,20 +53,17 @@ body
     content ""
     background-color solid4
     background-image repeating-linear-gradient(45deg,transparent,transparent 35px,solid2 35px,solid2 70px)
-    transform skewY(-3deg)
+    transform skewY(-2deg)
     width 100%
     height 100%
-    border-radius clamp(6px, 0.4vw, 0.6vw)
+    border-radius border2
   p
-    font-size clamp(1.4em, 1.4vw, 1.6vw)
-    line-height 140%
     color noWhite
-    font-family 'Viga', sans-serif
+    font-size clamp(22px, 1.6vw, 1.8vw)
+    line-height 1.2
   strong
-    font-size clamp(1.6em, 1.6vw, 1.8vw)
-  span
-    font-size clamp(1.6em, 1.6vw, 1.8vw)
-
+    text-transform uppercase
+    font-weight 700
 
 /* Banner Animation */
 .floating
@@ -184,117 +79,7 @@ body
   100%
     transform translateY(0%)
 
-/* Component AsideFooter */
-#main-aside
-  width 100%
-  padding clamp(3rem, 4vw, 4.2vw) 0 clamp(3rem, 4vw, 4.2vw) 0
-  background solid4
-  display flex
-  flex-direction column
-  justify-content center
-  align-items center
-  gap clamp(2rem, 2.8vw, 3vw)
-
-#logofooter
-  height auto
-  max-width 5%
-  min-width 48px
-
-#uso
-  width 90%
-  max-width 1920px
-  display flex
-  flex-wrap wrap
-  justify-content space-between
-  gap clamp(1rem, 1vw, 1.2vw) clamp(2rem, 2vw, 2.2vw)
-  h3, h4
-    border-bottom solid clamp(2px, 0.2vw, 0.3vw) solid2
-    width 100%
-    font-family 'Viga', sans-serif
-    font-size clamp(1.4em, 1.4vw, 1.6vw)
-    text-align center
-    padding-bottom clamp(1rem, 0.6vw, 0.8vw)
-    margin-bottom clamp(1rem, 1vw, 1.2vw)
-    color solid6
-    display flex
-    align-items center
-    justify-content center
-    gap clamp(1em, 1vw, 1vw)
-  div, nav
-    width 30%
-  p
-    padding-bottom clamp(1rem, 1vw, 1.2vw)
-    hyphens none
-  a
-    color noWhite
-    transition all 0.2s ease-in-out
-    &:hover
-      color solid8
-  ul
-    display flex
-    gap clamp(1rem, 1vw, 1.2vw)
-    a
-      outline solid clamp(3px, 0.1vw, 0.2vw) noWhite
-      padding clamp(1rem, 0.4vw, 0.6vw)
-      border-radius clamp(3px, 0.2vw, 0.2vw)
-      &:hover
-        background noWhite
-        color solid8
-  span
-    font-size clamp(1em, 1vw, 1.2vw)
-
-footer
-  padding clamp(2rem, 2vw, 2.2vw)
-  p
-    text-align center
-
 /*Responsive Design*/
 @media screen and (max-width:1024px)
-  /* Main menu */
-  #main-menu
-    menu
-      display none
-    .open-menu,.closed-menu
-      justify-content center
-      align-items center
-      span
-        font-size 48px
-    .open-menu
-      display flex
-  
-  #input-menu:checked ~ nav
-    .open-menu
-      display none
-    .closed-menu
-      display flex
-    menu
-      display flex
-      justify-content center
-      width 100%
-      position absolute
-      z-index 1
-      top 50vh
-      left 0
-      background solid8
-      padding 2rem
-    
-  /* Seccion principal de Layout */
   #main-section
     flex-direction column
-  
-  #uso
-    flex-direction column
-    div, nav
-      width 100%
-
-@media screen and (max-width:620px)
-  /* Conponent Header */
-  #wrapper-header
-    header
-      flex-direction column
-  
-  /* hgroup H1 y H2 */
-  #hgroup
-    flex-grow 1
-    flex-direction column
-

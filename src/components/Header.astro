@@ -1,6 +1,10 @@
 ---
+/* importando estilos */
+import "../styles/header.css";
+
 /* importando assets */
 import { Image } from "astro:assets";
+
 import logo from "../assets/logofg.svg";
 
 const { title } = Astro.props;
@@ -17,23 +21,11 @@ const { title } = Astro.props;
       ><Image src={logo} alt="Logotipo Fotos Gratis" />
     </a>
 
-    <input type="checkbox" id="input-menu" />
     <nav id="main-menu">
-      <label for="input-menu" class="open-menu"
-        ><span class="material-symbols-rounded">menu</span></label
-      >
-      <label for="input-menu" class="closed-menu"
-        ><span class="material-symbols-rounded">close</span></label
-      >
       <menu>
         <li>
-          <a href="/" title="Inicio"
-            >Inicio <span class="material-symbols-rounded"> home</span></a
-          >
-        </li>
-        <li>
           <a href="/fotos/" title="Fotos"
-            >Fotos <span class="material-symbols-rounded">photo_camera</span></a
+            >Fotos</a
           >
         </li>
       </menu>

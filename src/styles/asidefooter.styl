@@ -1,0 +1,68 @@
+@import './var.styl'
+
+/* Component AsideFooter */
+#main-aside
+  width 100%
+  padding space2 0 space2 0
+  background solid4
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  gap space1
+
+#logofooter
+  height auto
+  max-width 5%
+  min-width 48px
+  margin-bottom space1
+
+#uso
+  width 90%
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  gap space1
+  h3, h4
+    font-size clamp(22px, 1.4vw, 1.6vw)
+    border-bottom solid border1 solid2
+    width 100%
+    text-align center
+    padding-bottom space1
+    margin-bottom space1
+    color solid6
+    display flex
+    align-items center
+    justify-content center
+    gap space1
+  div, nav
+    width 30%
+  p
+    padding-bottom space1
+    hyphens none
+  a
+    color noWhite
+    &:hover
+      color solid8
+  ul
+    display flex
+    gap space1
+    a
+      outline solid border1 noWhite
+      padding space1
+      border-radius border1
+      &:hover
+        background noWhite
+        color solid8
+
+footer
+  padding space1
+  p
+    text-align center
+
+/*Responsive Design*/
+@media screen and (max-width:1024px)
+  #uso
+    flex-direction column
+    div, nav
+      width 100%

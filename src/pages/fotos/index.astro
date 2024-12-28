@@ -1,6 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const allPosts = await Astro.glob("../fotos/*.md");
+
+import "../../styles/fotos.css";
+
+/* importando colecciones */
+import { getCollection } from "astro:content";
+
+const allPhotos = await getCollection("fotos");
 ---
 
 <Layout>
@@ -8,16 +14,15 @@ const allPosts = await Astro.glob("../fotos/*.md");
     <header id="header-fotos">
       <div id="title-page">
         <h2>Carpetas de Fotos</h2>
-        <span class="material-symbols-rounded"> photo_library</span>
       </div>
 
-      <nav id="sub-menu">
-        <ul>
+      <nav>
+        <ul id="tags">
           {
-            allPosts.map((post) => (
+            allPhotos.map((post) => (
               <li>
-                <a href={post.url} title={post.frontmatter.title}>
-                  {post.frontmatter.title}
+                <a href={`/fotos/${post.slug}/`} title={post.data.title}>
+                  {post.data.title}
                 </a>
               </li>
             ))

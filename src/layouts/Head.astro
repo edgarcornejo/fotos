@@ -1,4 +1,9 @@
 ---
+/* importando estilos */
+import "../styles/reset.css";
+
+import {  ClientRouter } from "astro:transitions";
+
 const { title, description, keywords, image } = Astro.props;
 ---
 
@@ -11,8 +16,7 @@ const { title, description, keywords, image } = Astro.props;
   <meta name="generator" content={Astro.generator} />
 
   <title>
-    {title} - Descarga simple y rápida Free Photos, free pic, fotos gratuitas, fotos
-    sin derechos de autor, banco de fotos, imágenes gratis.
+    {title} - Descarga simple y rápida Free Photos, free pic, fotos gratuitas, fotos sin derechos de autor, banco de fotos, imágenes gratis.
   </title>
 
   <!-- META -->
@@ -34,19 +38,5 @@ const { title, description, keywords, image } = Astro.props;
   <meta property="og:site_name" content="Fotos Gratis" />
   <meta property="og:locale" content="es_PE" />
 
-  <!-- importando fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Viga&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  />
+  <ClientRouter />
 </head>

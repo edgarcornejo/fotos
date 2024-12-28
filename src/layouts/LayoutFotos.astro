@@ -1,35 +1,34 @@
 ---
-import Layout from "../layouts/Layout.astro";
+/* importando estilos */
 import "../styles/fotos.css";
-const { frontmatter, title = frontmatter.title } = Astro.props;
+
+/* importando componentes */
+import Head from "../layouts/Head.astro";
+import Header from "../components/Header.astro";
+import AsideFooter from "../components/AsideFooter.astro";
+import Cookies from "../components/Cookies.astro";
+
+const {
+  title = "Fotos Gratis",
+  description = "Fotos Gratis es un banco de fotos sin derecho de autor, gratuitas para todos para proyectos web o diseños de cualquier tipo.",
+  keywords = "free pic, fotos gratuitas, fotos sin derechos de autor, banco de fotos, imágenes gratis",
+  image = "https://www.fotos.edgarcornejo.com/app/fotosgratis.svg",
+} = Astro.props;
 ---
 
-<Layout {title}>
-  <div>
-    <header id="header-fotos">
-      <div id="title-page">
-        <h2>
-          Fotos de {frontmatter.title}
-        </h2>
-        <span class="material-symbols-rounded">photo_camera</span>
-      </div>
+<html lang="es">
+  <Head {title} {description} {keywords} {image} />
+  <body>
+    <Header {title} />
 
-      <p>{frontmatter.description}</p>
-      <ul id="tags">
-        {
-          frontmatter.tags.map((post: any) => (
-            <li>
-              <span class="material-symbols-rounded">label</span> {post}
-            </li>
-          ))
-        }
-      </ul>
-    </header>
-
-    <article>
-      <ul id="grid">
+    <main id="content">
+      <section>
         <slot />
-      </ul>
-    </article>
-  </div>
-</Layout>
+      </section>
+    </main>
+
+    <AsideFooter />
+
+    <Cookies />
+  </body>
+</html>

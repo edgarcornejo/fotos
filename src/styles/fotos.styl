@@ -1,109 +1,90 @@
-/* Variables */
-solid2 = rgba(0,0,0,0.2)
-solid4 = rgba(0,0,0,0.4)
-solid6 = rgba(0,0,0,0.6)
-solid8 = rgba(0,0,0,0.8)
-noWhite = #F2F2F2
+@charset "UTF-8"
+
+@import './var.styl'
+
+#content
+  width 100%
+  height auto
+  padding space2 0 space2 0
+  section
+    width 90%
+    margin 0 auto
 
 /* Header de fotos */
 #header-fotos
-  display flex
-  flex-direction column
-  p
-    margin clamp(1rem, 1vw, 1vw) 0 clamp(1rem, 1vw, 1vw) 0
-
-#title-page
-  display flex
-  align-items center
-  gap clamp(1rem, 1vw, 1vw)
+  margin-bottom space2
   h2
-    font-size clamp(2em, 2vw, 2.2vw)
-    font-family 'Viga', sans-serif
-    line-height 100%
-  span
-    color solid8
-    font-size clamp(48px, 2vw, 2vw)
+    font-size clamp(32px, 2vw, 2.2vw)
+    margin-bottom space2
+
+aside
+  outline solid border1 solid8
+  border-radius border2
+  margin space2 0 space2 0
+  position relative
+  img
+    position absolute
+    z-index -1
+    height 100%
+    width 100%
+    object-position center center
+
+#sub-menu
+  background linear-gradient(to top, noWhite, transparent)
+  div
+    display flex
+  h3
+    background solid8
+    color noWhite
+    text-transform uppercase
+    padding space1
+  p,ul
+    padding space1
+    color noWhite
+    background linear-gradient(to right, solid8, transparent)
   
 #tags
   display flex
   align-items center
   flex-wrap wrap
-  gap clamp(1rem, 1vw, 1.2vw)
+  gap space1
   li
     display flex
     align-items center
     color solid4
-    border solid clamp(2px, 0.1vw, 0.1vw) solid4
-    border-radius clamp(3px, 0.4vw, 0.4vw)
-    padding clamp(16px, 0.4vw, 0.6vw)
-    gap clamp(1rem, 0.4vw, 0.4vw)
-    text-transform capitalize
-  span
-    color solid4
-    font-size clamp(1em, 1vw, 1.2vw)
+    outline solid border1 solid4
+    border-radius border1
+    padding space1
 
-/* Categorias de Fotos */
-#sub-menu
-  padding clamp(2rem, 2vw, 2.2vw) 0 clamp(2rem, 2vw, 2.2vw) 0
-  ul
-    display flex
-    flex-wrap wrap
-    justify-content space-between
-    gap clamp(1rem, 1vw, 1.2vw)
-  a
-    border solid clamp(2px, 0.1vw, 0.1vw) solid6
-    border-radius clamp(3px, 0.4vw, 0.4vw)
-    padding clamp(0.8em, 0.8vw, 1vw)
-    transition all 0.2s ease-in-out
-    &:hover
-      color noWhite
-      background solid8
-
-/* Busqueda */
+/* Búsqueda */
 #search
   width 100%
-  padding clamp(1rem, 1vw, 1vw) 0 clamp(1rem, 1vw, 1vw) 0
+  padding space1 0 space1 0
   input[type=text]
-    padding clamp(1rem, 1vw, 1vw)!important
+    padding space1 !important
     background none !important
   .gsc-search-button-v2
-    padding clamp(1rem, 1vw, 1vw)
+    padding space1
     background-color solid6
     svg
       width 48px
 
 /* Grid de fotos */
 #grid
-  margin-top clamp(1rem, 1vw, 1vw)
-  display flex
-  flex-wrap wrap
+  margin-top space1
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(clamp(200px, 10vw, 10vw), 1fr))
   justify-content space-between
-  gap clamp(1rem, 1vw, 1.2vw)
+  gap space1
   li
-    width 22%
-    background #FFF
-    padding clamp(1rem, 1vw, 1.2vw)
-    border-radius clamp(3px, 0.2vw, 0.2vw)
+    background #FFFFFF
+    padding space1
+    border-radius border1
     text-align right
     &:hover img
       filter saturate(1)
   img
-    border-radius clamp(3px, 0.2vw, 0.2vw)
+    border-radius border1
     filter saturate(0)
     aspect-ratio 5 / 4
-  span
-    font-size clamp(2em, 2vw, 2vw)
-    margin-top clamp(1rem, 1vw, 1vw)
-
-/*Responsive Design*/
-@media screen and (max-width:1024px)
-  /* Grid de fotos */
-  #grid
-    li
-      width 48%
-
-@media screen and (max-width:768px)
-  /* Grid de fotos */
-  #grid
-    li
-      width 100%
+    transition all 0.4s ease

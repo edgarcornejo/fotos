@@ -1,0 +1,76 @@
+---
+/* Importando layouts */
+import LayoutFotos from "../../layouts/LayoutFotos.astro";
+
+import "../../styles/fotos.css";
+
+/* Importando colecciones */
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+	const allPhotos = await getCollection("fotos");
+	return allPhotos.map((post) => ({
+		params: { id: post.slug },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { data, slug } = post;
+const { title, author, description, image, tags } = data;
+
+const { Content } = await render(post);
+---
+
+<LayoutFotos title={title}
+	description={description}
+	keywords={tags}
+	author={author}
+	image={image} >
+
+	<article>
+		<header id="header-fotos">
+			<h2>{title}</h2>
+		</header>
+
+		<aside>
+			<img src={image} alt={title} />
+			<div id="sub-menu">
+				<div>
+					<h3>Portada:</h3>
+					<p>{title}</p>
+				</div>
+	
+				<div>
+					<h3>Autor:</h3>
+					<p>{author}</p>
+				</div>
+	
+				<div>
+					<h3>Descripción:</h3>
+					<p>{description}</p>
+				</div>
+				
+				<div>
+					<h3>Etiquetas:</h3>
+					<ul>
+						{
+							tags.map((post: any) => (
+								<li>
+									{post},
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</div>
+		</aside>
+	
+		<article>
+			<ul id="grid">
+				<Content />
+			</ul>
+		</article>
+	</article>
+
+</LayoutFotos>
