@@ -9,7 +9,7 @@ const executeCodes = () => {
       cookieBox.classList.remove("show");
 
       if (btn.id == "btn-accept") {
-        document.cookie = "cookieDe= MISD; max-age=" + 60 * 60 * 24 * 30;
+        document.cookie = "cookieDe= FG; max-age=" + 60 * 60 * 24 * 30;
       }
     })
   })
