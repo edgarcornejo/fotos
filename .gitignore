@@ -25,4 +25,4 @@ pnpm-debug.log*
 prepros.config
 
 # VS Code
-.vscode
+.vscode/

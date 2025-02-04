@@ -1,1 +1,286 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{font-size:100%;outline:0;text-rendering:optimizeLegibility}*{margin:0;padding:0;border:0;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:baseline}img{vertical-align:middle}figure,iframe,img,picture,video{max-width:100%;width:100%;display:block;-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center}a{display:block;text-decoration:none;font-size:inherit;-webkit-transition:all 0.4s ease;transition:all 0.4s ease}p a{display:inline;-webkit-transition:all 0.4s ease;transition:all 0.4s ease}li{list-style:none}@-ms-viewport{width:device-width}@-o-viewport{width:device-width}@viewport{width:device-width}body{-webkit-font-variant-ligatures:no-common-ligatures;font-variant-ligatures:no-common-ligatures;width:100%;height:100%}body{min-height:100vh;font-size:100%;line-height:1.4em;-ms-hyphens:auto;hyphens:auto;font-smooth:always;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html{scroll-behavior:smooth}a,b,blockquote,em,h1,h2,h3,h4,h5,h6,i,p,span,strong,u{font-size:1em;font-weight:inherit;font-style:inherit;text-decoration:none;color:inherit}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}button,form,input,label,select,textarea{font-family:inherit;font-size:inherit;-ms-hyphens:auto;hyphens:auto;background-color:transparent;color:inherit;display:block;-webkit-appearance:none;-moz-appearance:none;appearance:none}table,td,tr{border-collapse:collapse;border-spacing:0}svg{width:100%;display:block;fill:currentColor}@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/AtkinsonHyperlegible-Regular.ttf") format('truetype')}@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/AtkinsonHyperlegible-Bold.ttf") format('truetype')}@font-face{font-family:'Viga';font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/Viga-Regular.ttf") format('truetype')}::-moz-selection{background:rgba(0,0,0,0.2);text-shadow:none}::selection{background:rgba(0,0,0,0.2);text-shadow:none}::-webkit-scrollbar{width:15px}::-webkit-scrollbar-track{background:#bfeee7}::-webkit-scrollbar-thumb{border-radius:5px;background:#808080}h1,h2,h3,h4,h5,h6{font-family:'Viga',sans-serif}body{color:rgba(0,0,0,0.8);width:100%;font-size:clamp(16px,1vw,1.1vw);font-family:"Atkinson Hyperlegible",Arial,sans-serif;font-weight:400;background:#f2f2f2}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  outline: 0;
+  text-rendering: optimizeLegibility;
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+/* Reset Img */
+img {
+  vertical-align: middle;
+}
+/* Evitamos problemas con las imágenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+}
+/* Etilos enlaces */
+a {
+  display: block;
+  text-decoration: none;
+  font-size: inherit;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* Reset Li */
+li {
+  list-style: none;
+}
+/* Responsive */
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/* Estilos de Body */
+body {
+  -webkit-font-variant-ligatures: no-common-ligatures;
+          font-variant-ligatures: no-common-ligatures;
+  width: 100%;
+  height: 100%;
+}
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+/* opcional */
+  line-height: 1.4em;
+/* opcional */
+  -ms-hyphens: auto;
+  hyphens: auto;
+/* opcional */
+  font-smooth: always;
+/* opcional */
+  -webkit-font-smoothing: antialiased;
+/* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+/* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+/* Fuentes */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/AtkinsonHyperlegible-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/AtkinsonHyperlegible-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Viga';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Viga-Regular.ttf") format('truetype');
+}
+/* Selección */
+::-moz-selection {
+  background: rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+::selection {
+  background: rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+/* Estilos ScrollBar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #bfeee7;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #808080;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Viga', sans-serif;
+}
+body {
+  color: rgba(0,0,0,0.8);
+  width: 100%;
+  font-size: clamp(16px, 1vw, 1.1vw);
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+  font-weight: 400;
+  background: #f2f2f2;
+}

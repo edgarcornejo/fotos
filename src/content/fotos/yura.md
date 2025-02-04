@@ -1,7 +1,7 @@
 ---
 title: "Yura"
 description: "Fotos tomadas en el distrito de Yura en la ciudad de Arequipa, visitando yura viejo."
-image: https://farm6.staticflickr.com/5317/5856460766_e389fd3ac3_o.jpg
+image: https://farm6.staticflickr.com/5607/15552777311_54f1540454_n.jpg
 author: "Edgar Cornejo"
 date: 2024-02-04
 draft: false

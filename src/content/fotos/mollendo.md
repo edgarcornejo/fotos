@@ -1,7 +1,7 @@
 ---
 title: "Mollendo"
 description: "Fotos tomadas en la Provincia de Mollendo en Arequipa una de las playas visitas en temporada de verano."
-image: https://farm6.staticflickr.com/5317/5856460766_e389fd3ac3_o.jpg
+image: https://farm8.staticflickr.com/7452/16548199455_ddf9f559fe_n.jpg
 author: "Edgar Cornejo"
 date: 2024-02-04
 draft: false

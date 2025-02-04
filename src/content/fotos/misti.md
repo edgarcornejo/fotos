@@ -1,7 +1,7 @@
 ---
 title: "Misti"
 description: "Fotos tomadas en la subida al Misti, el volcán Arequipeño característico de esta ciudad."
-image: https://farm6.staticflickr.com/5317/5856460766_e389fd3ac3_o.jpg
+image: https://farm9.staticflickr.com/8741/17068783875_a76316256e_n.jpg
 author: "Edgar Cornejo"
 date: 2024-02-04
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Night"
 description: "Fotos tomadas en el mes de junio un poco variadas y fueron tomadas en Arequipa"
-image: https://farm6.staticflickr.com/5317/5856460766_e389fd3ac3_o.jpg
+image: https://c2.staticflickr.com/2/1497/25076549371_42f7d7d9de_n.jpg
 author: "Edgar Cornejo"
 date: 2024-02-04
 draft: false
