@@ -18,3 +18,4 @@ prepros.config
 
 # VS Code
 .vscode/*
+node_modules
